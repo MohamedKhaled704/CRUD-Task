@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            overflow: hidden;
+            position: relative;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 0.5s forwards;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border: none;
+            background: #ff7e5f;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 1s forwards;
+        }
+
+        button:hover {
+            background: #ff5733;
+            transform: scale(1.05);
+        }
+
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rise 10s infinite ease-in-out;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bubbles">
+        <div class="bubble" style="width: 40px; height: 40px; left: 10%; animation-duration: 6s;"></div>
+        <div class="bubble" style="width: 30px; height: 30px; left: 25%; animation-duration: 8s;"></div>
+        <div class="bubble" style="width: 50px; height: 50px; left: 50%; animation-duration: 10s;"></div>
+        <div class="bubble" style="width: 35px; height: 35px; left: 70%; animation-duration: 7s;"></div>
+        <div class="bubble" style="width: 45px; height: 45px; left: 90%; animation-duration: 9s;"></div>
+    </div>
+
+    <h1>Welcome to my site!</h1>
+    <p>Click the button to enter my site</p>
+    <button onclick="window.location.href='products.html'">Click Here</button>
+
+</body>
+</html>
