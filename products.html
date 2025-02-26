@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>E-Commerce</h1>
+            <div class="pages-title">
+                <a href="products.html">Products</a>
+                <a href="admin.html">admin</a>
+                <a href="create.html">create</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <aside>
+                <h2>filter product</h2>
+                <form action="" id="filter-form">
+                    <div class="input-div">
+                        <label for="category">Category</label>
+                        <select name="category" id="category">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label for="min-price">min price</label>
+                        <input type="number" name="min-price" id="min-price" placeholder="e.g, 10">
+                    </div>
+                    <div class="input-div">
+                        <label for="max-price">max price</label>
+                        <input type="number" name="max-price" id="max-price" placeholder="e.g, 100">
+                    </div>
+                    <div class="form-actions">
+                        <button id="apply-filter" type="submit">apply filter</button>
+                        <button id="reset-filter" type="reset">reset</button>
+                    </div>
+                </form>
+            </aside>
+            <section class="products"> 
+                    <div class="products-container" id="products-container">
+                        <!-- <div class="product">
+                            <picture class="picture"><img src="./images/no-image-icon-23485.png" alt="product"></picture>
+                            <h3 class="product-name">Product Name</h3>
+                            <p class="product-category">Electronics</p>
+                            <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, molestiae!</p>
+                            <p class="product-price">$100</p>
+                        </div> -->
+                    </div>
+                    <div class="pagenation">
+                        <button class="previous">prev</button>
+                        <button class="next">next</button>
+                    </div>
+            </section>
+            <button class="product-toTop">top</button>
+        </div>
+    </main>
+    <script src="products.js"></script>
+</body>
+</html>

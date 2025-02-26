@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(11, 108, 255);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header-container h1 {
+    color: white;
+    font-size: 24px;
+}
+.pages-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.pages-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+main {
+    background-color: rgb(231, 231, 231);
+    padding-top: 20px;
+    height: 95vh;
+}
+main .container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 200px;
+}
+.create-h2 {
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    color: rgb(11, 108, 255);
+}
+#create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-div label {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: system-ui;
+}
+.input-div input , .input-div select {
+    padding: 10px;
+    border: 1px solid rgb(231, 231, 231);
+}
+.input-div select {
+    background-color: rgb(231, 231, 231);;
+}
+.create-form-submit {
+    align-self: flex-end;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+    main .container {
+        padding: 10px 100px;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    main .container {
+        gap: 10px;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 767px) {
+    main .container {
+        padding: 10px 50px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header-container h1 {
+        font-size: 20px;
+    }
+    .pages-title a {
+        font-size: 12px;
+    }
+    main .container {
+        gap: 15px;
+        padding: 10px 20px;
+    }
+    .create-h2 {
+        font-size: 22px;
+    }
+    .create-form-submit {
+        padding: 8px;
+    }
+}

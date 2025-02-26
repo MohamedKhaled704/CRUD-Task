@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>E-Commerce</h1>
+            <div class="pages-title">
+                <a href="products.html">Products</a>
+                <a href="admin.html">admin</a>
+                <a href="create.html">create</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="create-h2">create new product </h2>
+        <form action="" id="create-form">
+            <div class="input-div">
+                <label for="product-title">Product Title</label>
+                <input type="text" name="product-title" id="product-title" placeholder="Enter product title" required>
+            </div>
+            <div class="input-div">
+                <label for="product-description">Product Description</label>
+                <input type="text" name="product-description" id="product-description" placeholder="Enter product description" required>
+            </div>
+            <div class="input-div">
+                <label for="product-img">Product Image URL</label>
+                <input type="url" name="product-img" id="product-img" placeholder="Enter product image URL" required>
+            </div>
+            <div class="input-div">
+                <label for="product-price">Product price ($)</label>
+                <input type="number" name="product-price" id="product-price" placeholder="Enter product price" required>
+            </div>
+            <div class="input-div">
+                <label for="product-category">Product Category</label>
+                <select name="product-category" id="product-category" required></select>
+            </div>
+            <button type="submit" class="create-form-submit">Create Product</button>
+        </form>
+        </div>
+    </main>
+    <script src="create.js"></script>
+</body>
+</html>

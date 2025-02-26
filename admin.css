@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(11, 108, 255);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header-container h1 {
+    color: white;
+    font-size: 24px;
+}
+.pages-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.pages-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+main {
+    background-color: rgb(231, 231, 231);
+    padding: 20px 0;
+    height: fit-content;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-h2 {
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    color: rgb(11, 108, 255);
+    font-family: system-ui;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actions button {
+    margin-right: 5px;
+    padding: 5px;
+    color: white;
+    border: none;
+    outline: none;
+}
+.view {
+    background-color: green;
+}
+.edit {
+    background-color: rgb(248, 216, 33);
+}
+.delete {
+    background-color: red;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.delete-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.delete-modal p {
+    margin-bottom: 20px;
+}
+
+.delete-modal button {
+    margin-right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 35%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header-container h1 {
+        font-size: 20px;
+    }
+    .pages-title a {
+        font-size: 12px;
+    }
+    .admin-h2 {
+        font-size: 18px;
+    }
+}
